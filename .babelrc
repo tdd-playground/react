@@ -1,27 +1,14 @@
 {
   "presets": [
     "es2015",
-    "react",
-    [
-      "env",
-      {
-        "targets": {
-          "node": "6.10",
-          "browsers": [
-            "Chrome >= 60",
-            "FireFox >= 60",
-            "Safari >= 10",
-            "Explorer 11"
-          ]
-        }
-      }
-    ],
-    "stage-2"
+    "env",
+    "react"
   ],
   "ignore": [
     "node_modules"
   ],
   "plugins": [
-
+    "transform-runtime",
+    "transform-class-properties"
   ]
 }

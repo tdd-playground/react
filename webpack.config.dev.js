@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const modules = require('./webpack.modules');
@@ -6,6 +5,7 @@ const modules = require('./webpack.modules');
 const webpackConfig = {
   mode: 'development',
   entry: [
+    'babel-polyfill',
     './src/Index.jsx',
   ],
   output: {
@@ -27,7 +27,6 @@ const webpackConfig = {
     port: '8888',
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
