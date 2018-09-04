@@ -10,19 +10,6 @@
   },
   "rules": {
     "linebreak-style": 0,
-    "comma-dangle": ["error", "always-multiline"],
-    "valid-jsdoc": ["error", {
-      "requireReturn": true,
-      "requireReturnType": true,
-      "requireParamDescription": true,
-      "requireReturnDescription": true
-    }],
-    "require-jsdoc": ["error", {
-      "require": {
-        "FunctionDeclaration": true,
-        "MethodDefinition": true,
-        "ClassDeclaration": true
-      }
-    }]
+    "comma-dangle": ["error", "always-multiline"]
   }
 }

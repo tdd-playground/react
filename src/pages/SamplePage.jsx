@@ -1,7 +1,28 @@
 import React from 'react';
 
-const SamplePage = () => (
-  <div>Hello World!</div>
-);
+export default class SamplePage extends React.PureComponent {
+  state={
+    counter: 0,
+  };
 
-export default SamplePage;
+  constructor(props) {
+    super(props);
+    this.handleClickEvent = this.handleClickEvent.bind(this);
+  }
+
+  handleClickEvent() {
+    this.setState(prevState => ({
+      counter: prevState.counter + 1,
+    }));
+  }
+
+  render() {
+    const { counter } = this.state;
+    return (
+      <div>
+        <div>{ counter }</div>
+        <button type="button" id="someButtonId" onClick={ this.handleClickEvent }>Button Name</button>
+      </div>
+    );
+  }
+}

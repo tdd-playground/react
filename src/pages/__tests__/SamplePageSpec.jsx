@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import SamplePage from '../SamplePage';
 
@@ -7,7 +7,7 @@ describe('SamplePage', () => {
   let wrapper;
 
   beforeAll(() => {
-    wrapper = shallow(<SamplePage />);
+    wrapper = mount(<SamplePage />);
   });
 
   describe('render', () => {
@@ -15,9 +15,13 @@ describe('SamplePage', () => {
       expect(wrapper).toBeTruthy();
     });
 
-    it('should display Hello World!', () => {
-      expect(wrapper.find('div').length).toBe(1);
-      expect(wrapper.find('div').text()).toBe('Hello World!');
+    it('should have a default state when the app loads', () => {
+      expect(wrapper.state().counter).toBe(0);
+    });
+
+    it('should increment the counter when the button is clicked', () => {
+      wrapper.find('#someButtonId').simulate('click');
+      expect(wrapper.state().counter).toBe(1);
     });
   });
 });
