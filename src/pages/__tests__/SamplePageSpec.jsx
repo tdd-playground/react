@@ -11,8 +11,11 @@ describe('SamplePage', () => {
   });
 
   describe('render', () => {
+    it('should render without crashing', () => {
+      expect(wrapper).toBeTruthy();
+    });
+
     it('should display Hello World!', () => {
-      console.log(wrapper);
       expect(wrapper.find('div').length).toBe(1);
       expect(wrapper.find('div').text()).toBe('Hello World!');
     });
