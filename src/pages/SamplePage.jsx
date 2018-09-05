@@ -20,8 +20,9 @@ export default class SamplePage extends React.PureComponent {
     const { counter } = this.state;
     return (
       <div>
+        <h1>Welcome to the Counter Application</h1>
         <div>{ counter }</div>
-        <button type="button" id="someButtonId" onClick={ this.handleClickEvent }>Button Name</button>
+        <button type="button" id="someButtonId" onClick={this.handleClickEvent}>Button Name</button>
       </div>
     );
   }

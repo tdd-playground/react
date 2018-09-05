@@ -20,7 +20,7 @@ const webpackConfig = {
   devServer: {
     contentBase: './dist',
     noInfo: false,
-    hot: true,
+    hot: false,
     inline: true,
     historyApiFallback: true,
     host: '127.0.0.1',
