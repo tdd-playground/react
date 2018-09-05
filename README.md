@@ -15,3 +15,8 @@ Remember that unit tests should test behavior and NOT implementation
 - Set Initial State
 - Simulate clicking a button that increments counter
 - Check to see if a particular function was called
+
+Use unique attributes, such as data-test to find components rather than id, name etc.
+  --> Enzyme selectors - attribute selector
+  
+"Strip trailing spaces on save" --> When you save indent will be removed on blank lines.
