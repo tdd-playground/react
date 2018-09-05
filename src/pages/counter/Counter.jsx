@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class SamplePage extends React.PureComponent {
+export default class Counter extends React.PureComponent {
   state={
     counter: 0,
     errorMsg: '',
